@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  background: $bg;
+}
+
+.content {
+  padding-left: calc(#{$navbarWidth} + 2rem);
+  & > * {
+    scroll-snap-type: proximity;
+  }
+}
+
+.navBarCon {
+  width: $navbarWidth;
+  position: relative;
+}

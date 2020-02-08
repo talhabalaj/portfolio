@@ -1,0 +1,33 @@
+.profileContainer {
+  display: flex;
+  height: 100vh;
+  color: $dark;
+  align-items: center;
+
+  .styledTextSecondary {
+    color: $secondary;
+  }
+
+  .styledTextPrimary {
+    color: $primary;
+  }
+
+  .profile {
+    padding: 2rem;
+
+    & > *:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    .subHeading {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: $lightgrey;
+    }
+  }
+}
