@@ -30,23 +30,25 @@ body {
 
 h3 {
   font-size: 2rem;
-  color: rgba(black, 0.7);
+  color: rgba($dark, .8);
 }
 
 h4 {
   font-size: 1.3rem;
-  color: rgba(black, 0.6);
+  color: rgba($dark, .8);
 }
 
 section {
   display: grid;
+  height: 100vh;
+  max-width: 1100px;
 }
 
 .educationSection {
-  padding-top: 3rem;
-  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
 
 .educationContainer {
   margin: .5rem 0;
@@ -59,22 +61,22 @@ section {
   grid-template-columns: 1fr 1fr;
   gap: 1rem 2rem; 
 
-
   .progress {
     width: 100%;
-    height: 1.4rem;
-    background: $primary;
+    height: 1.5rem;
     position: relative;
+    background: rgba(black, .1);
     border-radius: 7px;
-    
+
+
     span {
       font-size: .8rem;
+      line-height: 1.4rem;
     }
     
     .innerProgress {
-      background: $secondary;
-      width: 50%;
-      height: 1.4rem;
+      background: linear-gradient(to right, $primary, $secondary);
+      height: 1.5rem;
       border-radius: 7px;
       color: white;
       display: flex;

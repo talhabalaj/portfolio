@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styles from './navbar.scss';
+import styles from './NavBar.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPortrait, faUniversity, faBriefcase, faProjectDiagram, faMailBulk } from '@fortawesome/free-solid-svg-icons';
 
@@ -23,7 +23,6 @@ export default function NavBar() {
             Object.keys(links).forEach(link => {
                 const element: HTMLElement = document.querySelector(link);
                 if (element != null && scrollPos >= element.offsetTop && element.offsetTop + element.clientHeight > scrollPos) {
-                    console.log(scrollPos, link, element.offsetTop, element.clientHeight + element.offsetTop);
                     setActive(link);
                 }
             });
@@ -35,6 +34,9 @@ export default function NavBar() {
 
     return (
         <nav className={styles.navbar}>
+            <div className={styles.profile}>
+                <h1>Talha<br />Balaj</h1>
+            </div>
             <ul>
                 {Object.keys(links).map(
                     (key) => (

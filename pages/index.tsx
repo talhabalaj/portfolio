@@ -1,5 +1,5 @@
 import Profile from '../components/Profile';
-import NavBar from '../components/navbar';
+import NavBar from '../components/NavBar';
 import styles from './index.scss';
 
 export default function IndexPage() {
@@ -7,7 +7,7 @@ export default function IndexPage() {
         { 'skill': 'React', 'level': 90, },
         { 'skill': 'NodeJS / JavaScript / TypeScript', 'level': 95, },
         { 'skill': 'Flutter', 'level': 70, },
-        { 'skill': 'SCSS/SASS', 'level': 85, },
+        { 'skill': 'SCSS / SASS', 'level': 85, },
         { 'skill': 'SQL', 'level': 70, },
         { 'skill': 'C++', 'level': 90, },
         { 'skill': 'Python', 'level': 80, },
@@ -42,7 +42,7 @@ export default function IndexPage() {
                                         <div className={styles.skill}>
                                             <h4>{skill.skill}</h4>
                                             <div className={styles.progress}>
-                                                <div className={styles.innerProgress}>
+                                                <div className={styles.innerProgress} style={{ width: skill.level + '%' }}>
                                                     <span>{skill.level}%</span>
                                                 </div>
                                             </div>
@@ -54,13 +54,11 @@ export default function IndexPage() {
                     </div>
                 </section>
                 <section id="work">
-                    <Profile />
+
                 </section>
                 <section id="projects">
-                    <Profile />
                 </section>
                 <section id="contact">
-                    <Profile />
                 </section>
             </section>
         </main>
