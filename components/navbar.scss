@@ -5,29 +5,22 @@
   position: fixed;
   background: linear-gradient(to bottom right, $primary, $secondary);
   align-items: center;
+  box-shadow: 1px 0 30px rgba($color: $primary, $alpha: .35);
+      
 
   ul {
     width: 100%;
     list-style-type: none;
     li {
       %activeBtn {
+        transition: all .5s .25s;
         background: $thirdColor;
         color: findColorInvert($thirdColor);
-        width: 105%;
         position: relative;
-        &::before {
-          width: 1.5em;
-          height: 0.8em;
-          right: 2em;
-          transition: all 0.5s;
-          background: darken($thirdColor, 4);
-          position: absolute;
-          bottom: -0.1em;
-          transform: rotate(55deg);
-          right: 0;
-          z-index: -10000;
-          content: "";
-        }
+        width: 105%;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        box-shadow: 3px 0 31px rgba($color: $thirdColor, $alpha: 1);
       }
       a {
         text-decoration: none;
@@ -40,9 +33,6 @@
         background-color: rgba(white, 0.05);
         letter-spacing: 1px;
         background-position: 0;
-        &:hover {
-          @extend %activeBtn;
-        }
       }
       .active {
         @extend %activeBtn;

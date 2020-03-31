@@ -8,7 +8,7 @@ export default function Profile() {
                     I'm <span className={styles.styledTextSecondary}>Talha</span>, <br />
                     Software <span className={styles.styledTextPrimary}>Developer</span>.
                 </h2>
-                <span className={styles.subHeading}>React & NodeJS Developer / Flutter Develper</span>
+                <span className={styles.subHeading}>Full-Stack JavaScript Developer / Flutter Developer</span>
             </div>
         </section>
     );
