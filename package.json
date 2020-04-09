@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "start": "next"
+    "start": "next",
+    "build": "next build && next export"
   },
   "author": "Talha Balaj",
   "license": "ISC",
