@@ -23,7 +23,7 @@ export default function NavBar() {
             Object.keys(links).forEach(link => {
                 const element: HTMLElement = document.querySelector(link);
                 if (element != null && scrollPos >= element.offsetTop && element.offsetTop + element.clientHeight > scrollPos) {
-                    setActive(link);
+                    setActive(link)
                 }
             });
         }

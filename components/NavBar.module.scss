@@ -4,23 +4,25 @@
   display: flex;
   position: fixed;
   flex-direction: column;
+  justify-content: space-between;
   background: linear-gradient($primary, $secondary);
   box-shadow: 1px 0 12px 8px rgba($color: black, $alpha: .09);
       
 
   .profile {
+    flex: 1;
     h1 {
       color: findColorInvert($secondary);
       text-transform: uppercase;
       letter-spacing: .25rem;
       font-size: 2.5rem;
       padding-top: 1rem;
-      padding-bottom: 1rem;
       text-align: center; 
     }
   }
 
   ul {
+    flex: 3;
     width: 100%;
     list-style-type: none;
     li {

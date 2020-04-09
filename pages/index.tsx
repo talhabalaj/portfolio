@@ -1,6 +1,7 @@
 import Profile from '../components/Profile';
 import NavBar from '../components/NavBar';
 import styles from './index.scss';
+import Head from 'next/head';
 
 export default function IndexPage() {
     const skills = [
@@ -14,12 +15,14 @@ export default function IndexPage() {
         { 'skill': 'Git', 'level': 90, },
     ];
 
-
     return (
         <main>
-            <section className={styles.navBarCon}>
-                <NavBar />
-            </section>
+            <Head>
+                <title>Talha Balaj | Full Stack JavaScript Developer</title>
+                <meta name="Description" content="I am Talha Balaj, a Full-Stack Web Developer, doing Bachelors of Computer Science and experiment code in free time.  ">
+                <meta name="Keywords" content="code, developer, full-stack, html, css, nodejs, js, es6">
+            </Head>
+            <NavBar />
             <section className={styles.content}>
                 <section id="start">
                     <Profile />
@@ -53,13 +56,15 @@ export default function IndexPage() {
                         </div>
                     </div>
                 </section>
-                <section id="work">
-
+                {/* <section id="work">
+                    Still in development
                 </section>
                 <section id="projects">
+                    Still in development
                 </section>
                 <section id="contact">
-                </section>
+                    Still in development
+                </section> */}
             </section>
         </main>
     );
