@@ -19,8 +19,8 @@ export default function IndexPage() {
         <main>
             <Head>
                 <title>Talha Balaj | Full Stack JavaScript Developer</title>
-                <meta name="Description" content="I am Talha Balaj, a Full-Stack Web Developer, doing Bachelors of Computer Science and experiment code in free time.  ">
-                <meta name="Keywords" content="code, developer, full-stack, html, css, nodejs, js, es6">
+                <meta name="Description" content="I am Talha Balaj, a Full-Stack Web Developer, doing Bachelors of Computer Science and experiment code in free time.  " />
+                <meta name="Keywords" content="code, developer, full-stack, html, css, nodejs, js, es6" />
             </Head>
             <NavBar />
             <section className={styles.content}>
