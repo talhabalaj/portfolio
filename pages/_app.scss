@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+  @media (max-width: 786px) {
+    font-size: 13px;
+  }
+}
 
 body {
   font-family: "Roboto Mono", -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
@@ -11,12 +17,12 @@ body {
   background: url('/images/back.svg') no-repeat bottom fixed;
   background-size: contain;
   color: $dark;
-  font-size: 16px;
-  @media (max-width: 786px) {
-    font-size: 13px;
-  }
 }
 
+::selection {
+  background: rgba($primary, .8);
+  color: white;
+}
 
 h3 {
   font-size: 2rem;
@@ -32,13 +38,16 @@ section {
   & > div {
     padding: 2rem;
   }
+  
+  @media (max-width: 786px) {
+    padding-top: 1.5rem;
+  }
 }
 
 
 .content {
   margin-left: #{$navbarWidth};
   padding-left: 2rem;
-  height: 100vh;
   position: relative;
   @media (max-width: 786px) {
     padding-left: 0;
