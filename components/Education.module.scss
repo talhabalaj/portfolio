@@ -1,0 +1,45 @@
+
+.educationSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.educationContainer {
+  margin: .5rem 0;
+}
+
+.skillsContainer {
+  margin: .5rem 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem; 
+
+  .progress {
+    width: 100%;
+    height: 1.5rem;
+    position: relative;
+    background: rgba(black, .1);
+    border-radius: 10px;
+
+    span {
+      font-size: .8rem;
+      line-height: 1.4rem;
+    }
+    
+    .innerProgress {
+      background: $secondary;
+      height: 1.5rem;
+      color: white;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+  }
+}
