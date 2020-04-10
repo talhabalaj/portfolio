@@ -1,71 +1,14 @@
+import Head from 'next/head';
+
+import Education from '../components/Education';
 import Profile from '../components/Profile';
 import NavBar from '../components/NavBar';
 import styles from './index.scss';
-import Head from 'next/head';
 
 export default function IndexPage() {
-    const skills = [
-        { 'skill': 'React', 'level': 90, },
-        { 'skill': 'NodeJS / JavaScript / TypeScript', 'level': 95, },
-        { 'skill': 'Flutter', 'level': 70, },
-        { 'skill': 'SCSS / SASS', 'level': 85, },
-        { 'skill': 'SQL', 'level': 70, },
-        { 'skill': 'C++', 'level': 90, },
-        { 'skill': 'Python', 'level': 80, },
-        { 'skill': 'Git', 'level': 90, },
-    ];
-
     return (
-        <main>
-            <Head>
-                <title>Talha Balaj | Full Stack JavaScript Developer</title>
-                <meta name="Description" content="I am Talha Balaj, a Full-Stack Web Developer, doing Bachelors of Computer Science and experiment code in free time.  " />
-                <meta name="Keywords" content="code, developer, full-stack, html, css, nodejs, js, es6" />
-            </Head>
-            <NavBar />
-            <section className={styles.content}>
-                <section id="start">
-                    <Profile />
-                </section>
-                <section id="education">
-                    <div className={styles.educationSection}>
-                        <h3>Education</h3>
-                        <div className={styles.educationContainer}>
-                            <div className={styles.education}>
-                                <h4>Bacholar of Computer Science</h4>
-                                <p>University of Engineering and Technology, Lahore</p>
-                                <p>2018 - 2022 {(new Date()).getFullYear() < 2022 ? '(expected)' : null}</p>
-                            </div>
-                        </div>
-                        <h3>Skills</h3>
-                        <div className={styles.skillsContainer}>
-                            {
-                                skills.map(
-                                    skill => (
-                                        <div className={styles.skill}>
-                                            <h4>{skill.skill}</h4>
-                                            <div className={styles.progress}>
-                                                <div className={styles.innerProgress} style={{ width: skill.level + '%' }}>
-                                                    <span>{skill.level}%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )
-                                )
-                            }
-                        </div>
-                    </div>
-                </section>
-                {/* <section id="work">
-                    Still in development
-                </section>
-                <section id="projects">
-                    Still in development
-                </section>
-                <section id="contact">
-                    Still in development
-                </section> */}
-            </section>
-        </main>
+        <section id="start">
+            <Profile />
+        </section>
     );
 }

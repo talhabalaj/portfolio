@@ -1,7 +1,5 @@
 import Typewriter from 'typewriter-effect/dist/react';
 import Particles from 'react-particles-js';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import styles from './Profile.module.scss';
 
 
@@ -78,12 +76,12 @@ export default function Profile() {
                 </div>
                 <div className={styles.profile}>
                     <h2>Hey, <br />
-                    I'm <span className={styles.styledTextSecondary}>Talha</span>, <br />
+                    I'm Talha, <br />
                         <Typewriter options={{
                             strings: ['Web', 'App'],
                             autoStart: true,
                             loop: true,
-                            cursor: ''
+                            cursor: '|'
                         }} />
                     Developer
                 </h2>
