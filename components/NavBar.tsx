@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 import styles from './NavBar.module.scss';
@@ -16,6 +16,11 @@ export default function NavBar() {
     }
 
     const router = useRouter();
+    const [active, setActive] = useState(null);
+
+    useEffect(() => {
+        setActive(router.pathname);
+    }, [router?.pathname]);
 
     return (
         <nav className={styles.navbar}>
@@ -25,9 +30,9 @@ export default function NavBar() {
             <ul>
                 {Object.keys(links).map(
                     (key) => (
-                        <li>
+                        <li key={key}>
                             <Link href={key}>
-                                <a className={key == router?.pathname ? styles.active : ''} >{links[key]}</a>
+                                <a className={key == active ? styles.active : ''} >{links[key]}</a>
                             </Link>
                         </li>
                     )

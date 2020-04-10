@@ -1,4 +1,4 @@
-import App, { AppProps } from 'next/app'
+import App from 'next/app'
 import NavBar from '../components/NavBar';
 import styles from './_app.scss'
 import Head from '../components/Head';
