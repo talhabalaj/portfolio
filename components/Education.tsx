@@ -2,7 +2,7 @@ import styles from './Education.module.scss';
 
 const SkillProgress = ({ name, progress }: { name: string, progress: number }) => {
     return (
-        <div className={styles.skill}>
+        <div key={name} className={styles.skill}>
             <h4>{name}</h4>
             <div className={styles.progress}>
                 <div className={styles.innerProgress} style={{ width: progress + '%' }}>

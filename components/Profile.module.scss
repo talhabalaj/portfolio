@@ -3,6 +3,10 @@
   color: $dark;
   height: 100vh;
   align-items: center;
+
+  @media (max-width: 786px) {
+    height: calc(100vh - 4rem);
+  }
   
   
   .profile {
@@ -19,7 +23,7 @@
       span {
         cursor: pointer;
         color: $primary;
-        transition: all .5s ease-in-out;
+        transition: transform .5s ease-in-out, opacity .25s ease;
         &:last-child {
           opacity: 0;
         }
@@ -32,6 +36,10 @@
         &:first-child {
           opacity: 0;
         }
+      }
+
+      @media (max-width: 786px) {
+        text-align: left;
       }
     }
 
