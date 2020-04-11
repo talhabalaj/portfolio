@@ -12,7 +12,12 @@
   max-width: $navbarWidth;
   z-index: 1000;
 
-   ul {
+  @media (max-width: 786px) 
+  {
+    font-size: 140%;
+  }
+
+  ul {
     width: 100%;
     list-style-type: none;
     li {

@@ -14,7 +14,18 @@ html {
 body {
   font-family: "Roboto Mono", -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
-  background: url('/images/back.svg') no-repeat bottom fixed;
+  background: 
+    url('/images/back.svg') no-repeat bottom fixed,
+    right -25% / 50% 50% url('/images/back2.svg') no-repeat,
+  ;
+
+  @media (max-width: 786px) {
+    background: 
+    url('/images/back.svg') no-repeat bottom fixed,
+    url('/images/back2.svg') no-repeat top,
+  ;
+  }
+
   background-size: contain;
   color: $dark;
 }
@@ -40,7 +51,7 @@ section {
   }
   
   @media (max-width: 786px) {
-    padding-top: 1.5rem;
+    padding-top: 2rem;
   }
 }
 
