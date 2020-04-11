@@ -14,16 +14,19 @@ html {
 body {
   font-family: "Roboto Mono", -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
-  background: 
-    url('/images/back.svg') no-repeat bottom fixed,
-    right -25% / 50% 50% url('/images/back2.svg') no-repeat,
-  ;
+
+  @media  (min-width: 787px) {
+    background: 
+    bottom -15% right 0 / contain url('/images/back.svg') no-repeat,
+    top -20% left -25% / contain url('/images/back2.svg') no-repeat,
+    ;
+  }  
 
   @media (max-width: 786px) {
     background: 
-    url('/images/back.svg') no-repeat bottom fixed,
-    url('/images/back2.svg') no-repeat top,
-  ;
+    bottom / contain url('/images/back.svg') no-repeat ,
+    left -5% url('/images/back2.svg') no-repeat,
+    ;
   }
 
   background-size: contain;
@@ -45,6 +48,7 @@ h4 {
 
 section {
   display: grid;
+  min-height: 100vh;
   max-width: 1100px;
   & > div {
     padding: 2rem;
