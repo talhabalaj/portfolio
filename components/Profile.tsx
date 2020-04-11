@@ -9,8 +9,8 @@ export default function Profile() {
                     <h2>
                         <span>Hey, </span>
                         <span>I'm Talha,</span>
-                        <div>
-                            <div className={styles.whatIdo}>
+                        <div className={styles.whatIdo}>
+                            <div>
                                 <span>JavaScript</span>
                                 <span>Flutter</span>
                             </div>

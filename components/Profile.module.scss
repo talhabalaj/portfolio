@@ -14,18 +14,24 @@
     padding: 2rem;
 
     .whatIdo {
-      display: inline-flex;
-      flex-direction: column;
-      overflow: hidden;
-      text-align: center;
-      height: 4rem;
-      margin-right: .75rem;
-      span {
-        cursor: pointer;
-        color: $primary;
-        transition: transform .5s ease-in-out, opacity .25s ease;
-        &:last-child {
-          opacity: 0;
+      div {
+        display: inline-flex;
+        flex-direction: column;
+        overflow: hidden;
+        text-align: center;
+        height: 4rem;
+        margin-right: .75rem;
+        span {
+          cursor: pointer;
+          color: $primary;
+          transition: transform .5s ease-in-out, opacity .25s ease;
+          &:last-child {
+            opacity: 0;
+          }
+        }
+        
+        @media (max-width: 786px) {
+          text-align: left;
         }
       }
       &:hover span {
@@ -35,11 +41,8 @@
         }
         &:first-child {
           opacity: 0;
+          width: 0;
         }
-      }
-
-      @media (max-width: 786px) {
-        text-align: left;
       }
     }
 
@@ -52,12 +55,11 @@
       & > span {
         display: block;
       }
-      @for $i from 1 to 3 {  
-        & > span:nth-child(#{i}){
-          animation: appearLeft .25 ease-in-out;
-        }
-      }
-        
+      // @for $i from 1 to 3 {  
+      //   & > span:nth-child(#{i}){
+      //     animation: appearLeft .25 ease-in-out;
+      //   }
+      // }        
     }
 
     .subHeading {
