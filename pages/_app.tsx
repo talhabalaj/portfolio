@@ -10,8 +10,12 @@ const tagManagerArgs: TagManagerArgs = {
 
 export default class myApp extends App {
 
-    componentDidMount() { 
+    componentDidMount() {
         TagManager.initialize(tagManagerArgs)
+    }
+
+    componentDidUpdate() { 
+        TagManager.initialize(tagManagerArgs);
     }
 
     render() {
