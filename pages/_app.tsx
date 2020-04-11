@@ -13,11 +13,7 @@ export default class myApp extends App {
     componentDidMount() {
         TagManager.initialize(tagManagerArgs)
     }
-
-    componentDidUpdate() { 
-        TagManager.initialize(tagManagerArgs);
-    }
-
+    
     render() {
         const { Component, pageProps } = this.props;
         return (
