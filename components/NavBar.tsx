@@ -14,6 +14,7 @@ const HandburgerButton = ({ open }: { open: boolean }): JSX.Element => (
 
 export default function NavBar() {
     const [displaying, setDisplay] = useState(false);
+    const [scrolled, setScroll] = useState(false);
 
     const links = {
         '#about': 'About',
@@ -30,6 +31,11 @@ export default function NavBar() {
         setActive(`${currentPage}`);
         window.onscroll = (event) => {
             const scrollPos = window.pageYOffset;
+            if (scrollPos > 100) {
+                setScroll(true);
+            } else {
+                setScroll(false);
+            }
             Object.keys(links).forEach(link => {
                 const element: HTMLElement = document.querySelector(link);
                 if (element != null && scrollPos >= element.offsetTop && element.offsetTop + element.clientHeight > scrollPos) {
@@ -51,7 +57,7 @@ export default function NavBar() {
                 onChange={(e) => setDisplay(e.target.checked)}
                 hidden
             />
-            <div className={styles.handburgerMenuButton}>
+            <div className={`${styles.handburgerMenuButton} ${scrolled ? styles.scrolling : ''}`}>
                 <label htmlFor="menubutton" >
                     <HandburgerButton open={displaying} />
                 </label>

@@ -92,11 +92,12 @@
   display: none;
   z-index: 1001;
   animation: scaleUp .5s .75s both;
+  transition: top .25s;
 
   @media (max-width: 786px) {
     display: block;
     position: fixed;
-    top: 3rem;
+    top: 2rem;
     left: 2rem; 
   }
 
@@ -147,6 +148,22 @@
     &:last-child {
       top: 20px;
     }
+  }
+}
+
+.scrolling {
+  background: $primary;
+  width: 100%;
+
+  @media (max-width: 786px) {
+    top: 0rem;
+    left: 0rem; 
+  }
+  .handbugerbutton  {
+    margin-left: 2rem;
+  }
+  .open div {
+    background: white;
   }
 }
 
