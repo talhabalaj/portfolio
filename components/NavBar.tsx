@@ -21,7 +21,7 @@ export default function NavBar() {
         '#education': 'Education',
         '#work': 'Work',
         '#projects': 'Projects',
-        '#contact': 'Contact me',
+        '#contact': 'Contact',
     }
 
     const [active, setActive] = useState('#about');

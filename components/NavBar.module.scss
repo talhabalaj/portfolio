@@ -14,13 +14,13 @@
   
   @media (max-width: 786px) 
   {
-    transition: all .75s ease-in-out;
+    transition: all .5s ease-in-out;
     font-size: 140%;
     ul {
       li {
         transform: translateY(0);
         opacity: 1;
-        transition: transform 1s ease-in-out;
+        transition: all .5s ease-in-out;
       }
     }
   }
@@ -138,7 +138,7 @@
     opacity: 1;
     left: 0;
     transform: rotate(0deg);
-    transition: all .75s ease-in-out;
+    transition: all .5s ease-in-out;
     &:first-child {
       top: 0px;
     }
