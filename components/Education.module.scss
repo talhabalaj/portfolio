@@ -6,20 +6,24 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 2rem;
   @media (max-width: 786px) {
     margin-top: 4rem;
   }
 }
 
 .educationContainer {
-  margin: 1rem 0 2rem 0;
-  background: white;
+  margin: 1rem 0 2rem 0;  
   padding: 1.5rem;
-  box-shadow: 0 1px 10px rgba($color: #000000, $alpha: .09);
+  @include shadow;
 }
 
 .skillsContainer {
   margin: 1rem 0 2rem 0;
+  padding: 1.5rem;
+
+  @include shadow;
+
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -28,11 +32,7 @@
   @media (max-width: 786px) {
     grid-template-columns: 1fr;
   }
-
-  background: white;
-  padding: 1.5rem;
-  box-shadow: 0 1px 10px rgba($color: #000000, $alpha: .09);
-
+  
 
   .progress {
     width: 100%;

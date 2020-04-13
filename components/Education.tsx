@@ -28,7 +28,7 @@ export default () => {
 
 
     return (
-        <div className={styles.educationSection}>
+        <section className={styles.educationSection} id="education">
             <h3>Education</h3>
             <div className={styles.educationContainer}>
                 <div className={styles.education}>
@@ -47,6 +47,6 @@ export default () => {
                     )
                 }
             </div>
-        </div>
+        </section>
     );
 }

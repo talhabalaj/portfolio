@@ -1,3 +1,8 @@
 @keyframes appearLeft {
     from { opacity: 0; transform: translateX(-10rem);}
 }
+
+@keyframes scaleUp {
+    from {transform: scale(.9); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}

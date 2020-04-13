@@ -15,26 +15,11 @@ body {
   font-family: "Roboto Mono", -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
 
-  @media  (min-width: 787px) {
-    background: 
-    bottom -15% right 0 / contain url('/images/back.svg') no-repeat,
-    top -20% left -25% / contain url('/images/back2.svg') no-repeat,
-    ;
-  }  
-
-  @media (max-width: 786px) {
-    background: 
-    bottom / contain url('/images/back.svg') no-repeat ,
-    left -5% url('/images/back2.svg') no-repeat,
-    ;
-  }
-
-  background-size: contain;
   color: $dark;
 }
 
 ::selection {
-  background: rgba($primary, .8);
+  background: rgba($dark, .5);
   color: white;
 }
 
@@ -50,19 +35,13 @@ section {
   display: grid;
   min-height: 100vh;
   max-width: 1100px;
-  & > div {
-    padding: 2rem;
-  }
- 
 }
 
 
 .content {
-  margin-left: #{$navbarWidth};
-  padding-left: 2rem;
+  margin-left: $navbarWidth;
   position: relative;
   @media (max-width: 786px) {
-    padding-left: 0;
     margin-left: 0;
   }
 }
