@@ -2,7 +2,7 @@ import App from 'next/app'
 import NavBar from '../components/NavBar';
 import styles from './_app.scss'
 import Head from '../components/Head';
-import TagManager, { TagManagerArgs } from 'react-gtm-module'
+import TagManager, { TagManagerArgs } from 'react-gtm-module';
 
 const tagManagerArgs: TagManagerArgs = {
     gtmId: 'GTM-NTDGTW7'
