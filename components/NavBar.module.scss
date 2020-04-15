@@ -1,16 +1,14 @@
 .navbar {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   position: fixed;
   flex-direction: column;
   justify-content: center;
-  background: white;
+  background: $navbarBg;
   overflow: hidden;
   width: $navbarWidth;
   max-width: $navbarWidth;
   z-index: 1000;
-  
-  @include shadowX;
   
   @media (max-width: 786px) 
   {
@@ -27,21 +25,20 @@
 
   ul {
     width: 100%;
+    padding: 0 .5rem;
     list-style-type: none;
     li {
-      padding-right: 1rem;
       %activeBtn {
         transition: color .5s .25s;
         color: $primary;        
         &:after {
           background: $primary;
-          left: 5%;
-          right: 5%;
+          left:5%;
+          right:5%;
         }
       }
       a {
         text-decoration: none;
-        color: $dark;
         font-weight: 700;
         display: inline-block;
         padding: 1rem;
@@ -50,6 +47,9 @@
         letter-spacing: 1px;
         background-position: 0;
         position: relative;
+        &:not(.active) {
+          color: $secondary;
+        }
         &:after {
           content: '';
           transition: all .5s;

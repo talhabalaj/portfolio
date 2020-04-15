@@ -18,7 +18,7 @@ export default function NavBar() {
 
     const links = {
         '#about': 'About',
-        '#education': 'Education',
+        '#skills': 'Skills',
         '#work': 'Work',
         '#projects': 'Projects',
         '#contact': 'Contact',
@@ -28,7 +28,9 @@ export default function NavBar() {
 
     useEffect(() => {
         const currentPage = window.location.hash;
-        setActive(`${currentPage}`);
+        if (currentPage != '')
+            setActive(`${currentPage}`);
+
         window.onscroll = (event) => {
             const scrollPos = window.pageYOffset;
             if (scrollPos > 100) {

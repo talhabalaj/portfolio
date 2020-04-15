@@ -12,10 +12,10 @@ html {
 }
 
 body {
-  font-family: "Roboto Mono", -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+  font-family: Manrope, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
-
-  color: $dark;
+  background: $dark;
+  color: $secondary;
 }
 
 ::selection {
@@ -33,7 +33,6 @@ h4 {
 
 section {
   display: grid;
-  min-height: 100vh;
 }
 
 
