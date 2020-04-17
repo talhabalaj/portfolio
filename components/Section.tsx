@@ -20,7 +20,7 @@ const Section = styled.section<{ dark: boolean }>`
     position: relative;
     flex-direction: column;
     background: ${props => props.dark ? props.theme.colors.backDark : props.theme.colors.backLight};
-    color: ${props => props.dark ? 'white' : props.theme.colors.textDark};
+    color: ${props => props.dark ? props.theme.colors.textLight : props.theme.colors.textDark};
     max-width: 2560px;
     overflow: hidden;
 
@@ -41,7 +41,7 @@ const Section = styled.section<{ dark: boolean }>`
             font-size: 7rem;
             margin-bottom: 5rem;    
             text-align:center;
-            color: ${props => props.dark ? 'white' : props.theme.colors.textDark};
+            color: ${props => props.dark ? props.theme.colors.textLight : props.theme.colors.textDark};
         }
     }
 

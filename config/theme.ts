@@ -3,15 +3,16 @@ import { createGlobalStyle, DefaultTheme } from "styled-components";
 export const theme: DefaultTheme = {
     colors: {
         textDark: '#121212',
+        textLight: '#eaeaea',
         primary: '#F0A500',
         backDark: '#111111',
         watermarkDark: '#272727',
         backLight: '#EEEEEE',
         watermarkLight: '#D4D4D4',
         cardLightBack: 'white',
-        cardLightText: '#000',
+        cardLightText: '#121212',
         cardDarkBack: '#1A1919',
-        cardDarkText: '#ACACAC',
+        cardDarkText: '#eaeaea',
     },
 
     innerShadow: 'inset 0px 1px 4px rgba(0, 0, 0, 0.09)',
