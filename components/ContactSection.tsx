@@ -99,6 +99,7 @@ export const ContactSection = () => (
         </Bounce>
         <Bounce right>
             <ContactForm data-netlify="true">
+                <input type="hidden" name="form-name" value="contact" />
                 <InputField name="name" placeholder="Name" required />
                 <InputField name="email" type="email" placeholder="Email" required />
                 <TextField name="message" placeholder="Message" required />
