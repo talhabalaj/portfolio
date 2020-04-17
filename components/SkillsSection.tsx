@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { Section, SectionWatermarkClass, SectionWatermark } from './Section';
 import Fade from 'react-reveal/Fade';
-import { Button } from './Button';
 
 
 const SkillsContainer = styled(Section)`
@@ -13,7 +12,12 @@ const SkillsContainer = styled(Section)`
     ${SectionWatermarkClass} {
         top: calc(${props => props.theme.sectionTopPadding()} + 12rem);
     }
+
+    @media (max-width: 786px) {
+        padding-top: calc(${props => props.theme.sectionTopPadding()} + 15rem) ;    
+    }
 `;
+
 
 export const Skills = styled.div`
     display: flex;
@@ -30,7 +34,6 @@ export const Card = styled.div`
     text-align: center; 
     padding: 4.5rem;
     margin: 1.5rem;
-
     width: 37.5rem;
     height: 52.0rem;
 

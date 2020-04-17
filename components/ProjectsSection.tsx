@@ -3,21 +3,7 @@ import { Section, SectionWatermarkClass, SectionWatermark } from './Section';
 import Fade from 'react-reveal/Fade';
 import { Button } from './Button';
 
-const ProjectsContainer = styled(Section)`
-    transform: translateY(-${props => props.theme.sectionTopPadding(3)});
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    z-index: 700;
-    padding: calc(${props => props.theme.sectionTopPadding()} + 35rem) 10rem 22rem 10rem;
-    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
-
-    ${SectionWatermarkClass} {
-        font-size: 20rem;
-        top: calc(${props => props.theme.sectionTopPadding()} + 17rem);
-    }
-
-    & > :not(:last-child) {margin-bottom: 4rem;}
+const Projects = styled.div`
 
 `;
 
@@ -29,7 +15,7 @@ const ProjectCard = styled.div`
     color: ${props => props.theme.colors.cardDarkText};
     padding: 10rem 3rem;
     display: flex;
-    min-width: 800px;
+    max-width: 110rem;
     justify-content: flex-end;
     font-size: 2.4rem;
     position:relative;
@@ -41,14 +27,40 @@ const LaptopFramedProject = styled.div`
     left: -9rem;
     top: 50%;
     transform: translateY(-50%);
+    width: 64rem;
+
+    @media (max-width: 786px) {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+        width: 44rem;
+        margin-bottom: 5rem;
+    }
+
+    @media (max-width: 420px) {
+        width: 30rem;
+    }
+
     img {
         &:first-child {
-            left: -2rem;
+            width: 100%;
         }
         &:last-child {
-            position:absolute;
-            top: 37px;
-            left: 84px;
+            width: 47rem;
+            position: absolute;
+            top: 3.7rem;
+            left: 8.4rem;
+            @media (max-width: 786px) {
+                width: 32.4rem;
+                top: 2.4rem;
+                left: 5.8rem;
+            }
+            @media (max-width: 420px) {    
+                width: 22.1rem;
+                top: 1.8rem;
+                left: 3.9rem;
+            }
         }
     }
 `;
@@ -57,15 +69,63 @@ const ProjectDescription = styled.div`
     width: 43%;
 
     p { font-size: 2.4rem; }
+
+    @media (max-width: 420px) {  
+        h2 { font-size: 4rem; }  
+        h3 { font-size: 3.2rem; } 
+    }
 `;
 
 const TechIcons = styled.div`
     margin: 1rem;
-    margin-left: 0;
-    height: 50px;
-    width: 80px;
+    height: 5rem;
+    width: 8rem;
     display: inline-block;
 `;
+
+const ProjectsContainer = styled(Section)`
+    transform: translateY(-${props => props.theme.sectionTopPadding(3)});
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 700;
+    padding: calc(${props => props.theme.sectionTopPadding()} + 35rem) 10rem 22rem 10rem;
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+
+    ${SectionWatermarkClass} {
+        font-size: 20rem;
+        top: calc(${props => props.theme.sectionTopPadding()} + 17rem);
+
+        @media (max-width: 786px) { 
+            font-size: 7rem;
+        }
+    }
+
+    & > :not(:last-child) {margin-bottom: 4rem;}
+
+
+    @media (max-width: 786px) {
+        padding-left: 5rem;
+        padding-top: calc(${props => props.theme.sectionTopPadding()} + 10rem);
+        padding-right: 5rem;
+        ${Projects} {
+            flex-direction: column; 
+        }
+        ${ProjectCard} {
+            max-width: 80rem;
+            align-items: center;
+            flex-direction: column;
+           
+            ${ProjectDescription} {
+                width: 90%;
+                text-align: center;
+               
+            }
+        }
+    }
+
+`;
+
+
 
 const AnimatedProjectCard = ({ project, description, imgSrc, techs }) => (
     <Fade bottom cascade>
@@ -84,7 +144,7 @@ const AnimatedProjectCard = ({ project, description, imgSrc, techs }) => (
     </Fade >
 );
 
-const Projects = [
+const projects = [
     {
         project: 'My Portfolio',
         description: 'My portfolio is one of my best designs. It demonstrates my knowledge of React, NextJS and styled-components.',
@@ -101,7 +161,9 @@ const Projects = [
 export const ProjectsSection = () => (
     <ProjectsContainer dark>
         <SectionWatermark>Projects</SectionWatermark>
-        {Projects.map(project => <AnimatedProjectCard key={project.project} {...project} />)}
+        <Projects>
+            {projects.map(project => <AnimatedProjectCard key={project.project} {...project} />)}
+        </Projects>
         <Fade up>
             <Button>view more on github</Button>
         </Fade>

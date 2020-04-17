@@ -22,6 +22,7 @@ const Section = styled.section<{ dark: boolean }>`
     background: ${props => props.dark ? props.theme.colors.backDark : props.theme.colors.backLight};
     color: ${props => props.dark ? 'white' : props.theme.colors.textDark};
     max-width: 2560px;
+    overflow: hidden;
 
     ${SectionWatermarkClass} {
         opacity: 1;
@@ -33,7 +34,17 @@ const Section = styled.section<{ dark: boolean }>`
         left: 50%;
         transform: translateX(-50%);
         color: ${props => props.dark ? props.theme.colors.watermarkDark : props.theme.colors.watermarkLight};
+        @media (max-width: 786px) {
+            position: static;
+            transform: none;
+            z-index: unset;
+            font-size: 7rem;
+            margin-bottom: 5rem;    
+            text-align:center;
+            color: ${props => props.dark ? 'white' : props.theme.colors.textDark};
+        }
     }
+
 `;
 
 Section.defaultProps = { dark: false };

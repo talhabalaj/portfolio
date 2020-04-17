@@ -2,19 +2,6 @@ import styled from 'styled-components';
 import { Section, SectionWatermarkClass, SectionWatermark } from './Section';
 import Bounce from 'react-reveal/Bounce';
 
-const AboutContainer = styled(Section)`
-    transform: translateY(-${props => props.theme.sectionTopPadding(1)});
-    flex-direction: row;
-    z-index: 900;
-    padding: calc(${props => props.theme.sectionTopPadding()} + 20rem) 12rem 22rem 10rem;
-    justify-content: space-evenly;
-    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
-
-    ${SectionWatermarkClass} {
-        top: calc(${props => props.theme.sectionTopPadding()});
-    }
-`;
-
 const AboutMe = styled.div`
     p {
         font-size: 2.4rem;
@@ -28,6 +15,34 @@ const AboutImage = styled.div`
         height: 40rem;
     }
 `;
+
+const AboutContainer = styled(Section)`
+    transform: translateY(-${props => props.theme.sectionTopPadding(1)});
+    flex-direction: row;
+    z-index: 900;
+    padding: calc(${props => props.theme.sectionTopPadding()} + 20rem) 12rem 22rem 10rem;
+    justify-content: space-evenly;
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+
+    ${SectionWatermarkClass} {
+        top: calc(${props => props.theme.sectionTopPadding()});
+    }
+
+    @media (max-width: 786px) {
+        flex-direction: column;
+        align-items: center;
+        padding-left:5rem;
+        padding-top: calc(${props => props.theme.sectionTopPadding()} + 10rem);
+        padding-right:5rem;
+        ${AboutImage} {
+            margin-right: 0;
+            margin-bottom: 7rem;
+        }
+
+    }
+`;
+
+
 
 export const AboutSection = () => (
     <AboutContainer dark>
