@@ -22,6 +22,9 @@ const Profile = styled.div`
     color: ${props => props.theme.colors.textDark};
     div {
       display: block;
+      &:nth-child(1) {
+        text-transform: uppercase;
+      }
       &:nth-child(2) {
         font-size: 2.4rem;
         font-weight: normal;
@@ -66,7 +69,7 @@ export const IntroSection = () => (
       <HeaderWarkmark>Code<br />Design</HeaderWarkmark>
       <Profile>
         <h1>
-          <Fade down>I'm Talha Balaj</Fade>
+          <Fade down>Talha Balaj</Fade>
           <Fade up>Full Stack JavaScript Developer</Fade>
         </h1>
         <Fade left>
