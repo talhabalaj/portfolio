@@ -39,7 +39,7 @@ const LaptopFramedProject = styled.div`
     }
 
     @media (max-width: 420px) {
-        width: 30rem;
+        width: 35rem;
     }
 
     img {
@@ -56,10 +56,10 @@ const LaptopFramedProject = styled.div`
                 top: 2.4rem;
                 left: 5.8rem;
             }
-            @media (max-width: 420px) {    
-                width: 22.1rem;
-                top: 1.8rem;
-                left: 3.9rem;
+            @media (max-width: 420px) {            
+                width: 25.9rem;
+                top: 2rem;
+                left: 4.5rem;
             }
         }
     }
@@ -78,10 +78,11 @@ const ProjectDescription = styled.div`
 
 const TechIcons = styled.div`
     margin: 1rem;
-    height: 5rem;
-    width: 8rem;
     display: inline-block;
-`;
+    img {
+        height: 5rem;
+    }
+ `;
 
 const ProjectsContainer = styled(Section)`
     transform: translateY(-${props => props.theme.sectionTopPadding(3)});
@@ -102,7 +103,6 @@ const ProjectsContainer = styled(Section)`
 
     & > :not(:last-child) {margin-bottom: 4rem;}
 
-
     @media (max-width: 786px) {
         padding-left: 5rem;
         padding-top: calc(${props => props.theme.sectionTopPadding()} + 10rem);
@@ -114,13 +114,19 @@ const ProjectsContainer = styled(Section)`
             max-width: 80rem;
             align-items: center;
             flex-direction: column;
+            padding: 3rem;
            
             ${ProjectDescription} {
-                width: 90%;
+                width: unset;
                 text-align: center;
                
             }
         }
+    }
+
+    @media (max-width: 420px) {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
 `;
@@ -165,7 +171,9 @@ export const ProjectsSection = () => (
             {projects.map(project => <AnimatedProjectCard key={project.project} {...project} />)}
         </Projects>
         <Fade up>
-            <Button>view more on github</Button>
+            <a target="_blank" href="https://github.com/talhabalaj?tab=repositories">
+                <Button>view more on github</Button>
+            </a>
         </Fade>
     </ProjectsContainer >
 );

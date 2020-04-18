@@ -2,9 +2,23 @@ import React from 'react';
 import { Button } from "./Button";
 import styled from "styled-components";
 import { Section } from './Section';
+import Link from 'next/link';
 import Fade from 'react-reveal/Fade';
 
 const SocialLink = styled.a`
+  color: ${props => props.theme.colors.textDark};
+  i { 
+    font-size: 3.8rem;
+    transition: all .25s ease-in-out;
+  }
+  &:hover{
+    i { 
+      transform: scale(1.1); 
+    }
+    .im-github { color: #6e5494; };
+    .im-instagram { color: #c13584; };
+    .im-linkedin { color: #0077b5; };
+  }
   &:not(:last-child) {
     margin-right: 2.5rem;
   }
@@ -12,21 +26,24 @@ const SocialLink = styled.a`
 
 const Profile = styled.div`
   z-index: 10;
+  padding: 0 2rem;
 
   & > :not(:last-child) {
     margin-bottom: 3rem;
   }
 
   h1 {
-    font-size: 6.4rem;
+    font-size: 7.4rem;
     color: ${props => props.theme.colors.textDark};
     div {
       display: block;
       &:nth-child(1) {
+        color: ${props => props.theme.colors.primary};
+        font-weight: 900;
         text-transform: uppercase;
       }
       &:nth-child(2) {
-        font-size: 2.4rem;
+        font-size: 3rem;
         font-weight: normal;
       }
     }
@@ -74,15 +91,17 @@ export const IntroSection = () => (
         </h1>
         <Fade left>
           <SocialLinkList >
-            <SocialLink href="https://linkedin.com"><img src="/svg/LinkedInLogo.svg" alt="linkedin logo" /> </SocialLink>
-            <SocialLink href="https://github.com/talhabalaj"><img src="/svg/GitHubLogo.svg" alt="github logo" /> </SocialLink>
-            <SocialLink href="https://instagram.com/talha.codes"><img src="/svg/InstaLogo.svg" alt="Insta logo" /> </SocialLink>
+            <SocialLink target="_blank" href="https://www.linkedin.com/in/talha-balaj-20a353101/"><i className="im im-linkedin"></i></SocialLink>
+            <SocialLink target="_blank" href="https://github.com/talhabalaj"><i className="im im-github"></i></SocialLink>
+            <SocialLink target="_blank" href="https://instagram.com/talha.codes"><i className="im im-instagram"></i></SocialLink>
           </SocialLinkList>
         </Fade>
         <Fade right>
-          <Button>
-            Contact Me
-          </Button>
+          <Link href="#contact">
+            <Button>
+              Contact Me
+            </Button>
+          </Link>
         </Fade>
       </Profile>
     </IntroContainer>

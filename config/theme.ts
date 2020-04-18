@@ -38,6 +38,7 @@ export const GlobalStyles = createGlobalStyle`
         @media (max-width: 864px) {
             font-size: 7px;
         }
+        scroll-behavior: smooth;
     }
     body {
     }

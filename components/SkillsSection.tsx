@@ -35,29 +35,12 @@ export const Card = styled.div`
     padding: 4.5rem;
     margin: 1.5rem;
     width: 37.5rem;
-    height: 52.0rem;
+    height: 54.0rem;
 
     img {
         height: 16.6rem;
     }
-
-    h3, h4 {
-        text-transform: uppercase;
-        margin: 2rem 0 0.5rem 0;
-    }
-        
-    h3 {
-        font-size: 3.4rem;
-        font-weight: 800;
-    }
-    p, ul {
-        font-size: 1.7rem;
-        line-height: 140%;
-    }
-    h4 {
-        font-size: 2.1rem;
-    }
-    ul {
+     ul {
         list-style-type: none;
     }
 `;
