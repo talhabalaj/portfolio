@@ -41,6 +41,8 @@ export const GlobalStyles = createGlobalStyle`
         scroll-behavior: smooth;
     }
     body {
+        background-image:linear-gradient(to bottom, rgba(0,0,0, .6), rgba(0,0,0, .7)), url('images/peter-thomas-6pem5V75I1s-unsplash_1_1_jpsaqc_c_scale,w_1400.jpg');
+        background-attachment: fixed;
     }
 
     a {
