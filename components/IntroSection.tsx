@@ -8,7 +8,7 @@ import Fade from 'react-reveal/Fade';
 const SocialLink = styled.a`
   color: ${props => props.theme.colors.textDark};
   i { 
-    font-size: 3.8rem;
+    font-size: 3rem;
     transition: all .25s ease-in-out;
   }
   &:hover{
@@ -43,8 +43,8 @@ const Profile = styled.div`
         text-transform: uppercase;
       }
       &:nth-child(2) {
-        font-size: 3rem;
-        font-weight: normal;
+        font-size: 2.2rem;
+        font-weight: 600;
       }
     }
   }

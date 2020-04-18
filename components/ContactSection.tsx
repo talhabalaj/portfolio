@@ -44,14 +44,13 @@ const ContactForm = styled.form`
 const InputField = styled.input`
     display: block;
     width: 38rem;
-    height: 6rem;
+    height:5rem;
     background: #DFDFDF;
     border: none;
     outline: none;
     padding: 1.8rem 1.3rem;
     border-bottom: .3rem solid transparent;
-    box-shadow: ${props => props.theme.innerShadow};
-    font-size: 1.9rem;
+    font-size: 1.3rem;
     color: ${props => props.theme.colors.textDark};
     &:focus {
         border-color: ${props => props.theme.colors.primary};
@@ -65,12 +64,11 @@ const TextField = styled.textarea`
     width: 38rem;
     height: 17rem;
     padding: 1.8rem 1.3rem;
-    font-size: 1.9rem;
+    font-size: 1.3rem;
     background: #DFDFDF;
     outline: none;
     display: block;
     border: none;
-    box-shadow: ${props => props.theme.innerShadow};
     color: ${props => props.theme.colors.textDark};
     @media (max-width: 786px) {
         width: 100%;
@@ -78,7 +76,8 @@ const TextField = styled.textarea`
 `;
 
 const ContactInvite = styled.div`
-    font-size: 4.8rem;
+    font-size: 3.8rem;
+    padding: 4rem;
     max-width: 65rem;
     @media (max-width: 786px) {
         font-size: 3.5rem;
