@@ -90,7 +90,7 @@ const ContactInvite = styled.div`
 
 
 export const ContactSection = () => (
-    <ContactContainer dark={false} id="contact">
+    <ContactContainer dark={false} >
         <SectionWatermark>Contact</SectionWatermark>
         <Bounce left>
             <ContactInvite>
@@ -98,7 +98,7 @@ export const ContactSection = () => (
             </ContactInvite>
         </Bounce>
         <Bounce right>
-            <ContactForm name="contact" data-netlify="true" action="/success">
+            <ContactForm id="contact" name="contact" data-netlify="true" action="/success">
                 <input type="hidden" name="form-name" value="contact" />
                 <InputField name="name" placeholder="Name" required />
                 <InputField name="email" type="email" placeholder="Email" required />
