@@ -11,6 +11,7 @@ const SuccessMessage = styled.div`
     padding: 2rem;
     text-align: center;
     font-size: 4rem;
+    color: white;
     height: 100vh;
     font-weight: 700;
     & > :not(:last-child) { margin-bottom: 1rem;}
