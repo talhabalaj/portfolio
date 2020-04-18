@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Layout } from "../components/Layout";
 import { Button } from "../components/Button";
-import { useRouter } from "next/dist/client/router";
 
 const SuccessMessage = styled.div`
     display: flex;
@@ -18,12 +17,14 @@ const SuccessMessage = styled.div`
 `;
 
 export default function SuccessPage() {
-    const router = useRouter();
+
     return (
         <Layout>
             <SuccessMessage>
                 <span>Message sent successfully!</span>
-                <Button onClick={() => router.push('/')}><i className="im im-angle-left"></i> Back</Button>
+                <a href="/">
+                    <Button><i className="im im-angle-left"></i> Back</Button>
+                </a>
             </SuccessMessage>
         </Layout>
     )
