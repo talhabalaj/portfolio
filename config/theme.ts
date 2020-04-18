@@ -8,7 +8,7 @@ export const theme: DefaultTheme = {
         backDark: '#111111',
         watermarkDark: '#272727',
         backLight: '#EEEEEE',
-        watermarkLight: '#D4D4D4',
+        watermarkLight: '#e2e2e2',
         cardLightBack: 'white',
         cardLightText: '#121212',
         cardDarkBack: '#1A1919',
@@ -43,6 +43,7 @@ export const GlobalStyles = createGlobalStyle`
     body {
         background-image:linear-gradient(to bottom, rgba(0,0,0, .6), rgba(0,0,0, .7)), url('images/peter-thomas-6pem5V75I1s-unsplash_1_1_jpsaqc_c_scale,w_1400.jpg');
         background-attachment: fixed;
+        background-size: cover;
     }
 
     a {
