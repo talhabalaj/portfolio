@@ -48,7 +48,7 @@ export const Card = styled.div`
 const SkillCard = ({ skill, description, imgSrc, techs }) => (
     <Fade bottom cascade>
         <Card>
-            <img src={imgSrc} />
+            <img src={imgSrc} loading="lazy" />
             <h3>{skill}</h3>
             <p>{description}</p>
             <h4>Technologies</h4>

@@ -137,8 +137,8 @@ const AnimatedProjectCard = ({ project, description, imgSrc, techs }) => (
     <Fade bottom cascade>
         <ProjectCard>
             <LaptopFramedProject>
-                <img src="/images/laptopframe.png" />
-                <img src={imgSrc} />
+                <img src="/images/laptopframe.png" loading="lazy" />
+                <img src={imgSrc} loading="lazy" />
             </LaptopFramedProject>
             <ProjectDescription>
                 <h2>{project}</h2>

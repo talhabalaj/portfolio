@@ -49,7 +49,7 @@ export const AboutSection = () => (
         <SectionWatermark>About</SectionWatermark>
         <Bounce left>
             <AboutImage>
-                <img src="/images/my_pic.png" alt="Talha Balaj" />
+                <img src="/images/my_pic.png" alt="Talha Balaj" loading="lazy" />
             </AboutImage>
         </Bounce>
         <Bounce right>
