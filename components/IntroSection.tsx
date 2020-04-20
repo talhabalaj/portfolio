@@ -18,6 +18,7 @@ const SocialLink = styled.a`
     .im-github { color: #6e5494; };
     .im-instagram { color: #c13584; };
     .im-linkedin { color: #0077b5; };
+    .im-code { color: #fb4881; };
   }
   &:not(:last-child) {
     margin-right: 2.5rem;
@@ -94,6 +95,7 @@ export const IntroSection = () => (
             <SocialLink target="_blank" href="https://www.linkedin.com/in/talha-balaj-20a353101/"><i className="im im-linkedin"></i></SocialLink>
             <SocialLink target="_blank" href="https://github.com/talhabalaj"><i className="im im-github"></i></SocialLink>
             <SocialLink target="_blank" href="https://instagram.com/talha.codes"><i className="im im-instagram"></i></SocialLink>
+            <SocialLink target="_blank" href="https://dev.to/talhabalaj"><i className="im im-code"></i></SocialLink>
           </SocialLinkList>
         </Fade>
         <Fade right>
