@@ -1,16 +1,17 @@
-import styled from 'styled-components';
-import { Section, SectionWatermarkClass, SectionWatermark } from './Section';
-import Bounce from 'react-reveal/Bounce';
-import { Button } from './Button';
+import styled from "styled-components";
+import { Section, SectionWatermarkClass, SectionWatermark } from "./Section";
+import Bounce from "react-reveal/Bounce";
+import { Button } from "./Button";
 
 const ContactContainer = styled(Section)`
-    transform: translateY(-${props => props.theme.sectionTopPadding(4)});
+    transform: translateY(-${(props) => props.theme.sectionTopPadding(4)});
     flex-direction: row;
     z-index: 600;
-    padding: calc(${props => props.theme.sectionTopPadding()} + 20rem) 10rem 22rem 10rem;
+    padding: calc(${(props) =>
+  props.theme.sectionTopPadding()} + 20rem) 10rem 22rem 10rem;
     justify-content: space-between;
     ${SectionWatermarkClass} {
-        top: calc(${props => props.theme.sectionTopPadding()} + 2rem);
+        top: calc(${(props) => props.theme.sectionTopPadding()} + 2rem);
         font-size: 20.5rem;
 
         @media (max-width: 786px) {
@@ -21,7 +22,8 @@ const ContactContainer = styled(Section)`
     @media (max-width: 786px) {
         flex-direction: column;
         padding-left: 5rem;
-        padding-top: calc(${props => props.theme.sectionTopPadding()} + 10rem);
+        padding-top: calc(${(props) =>
+  props.theme.sectionTopPadding()} + 10rem);
         padding-right: 5rem;
     }
 `;
@@ -34,12 +36,11 @@ const ContactForm = styled.form`
         margin-bottom: 2.1rem;
     }
     @media (max-width: 786px) {
-        align-items: center;
         margin-left: 0rem;
         margin-top: 5rem;
     }
+    font-size: 2rem;
 `;
-
 
 const InputField = styled.input`
     display: block;
@@ -50,11 +51,11 @@ const InputField = styled.input`
     outline: none;
     padding: 1.8rem 1.3rem;
     border-bottom: .3rem solid transparent;
-    box-shadow: ${props => props.theme.innerShadow};
+    box-shadow: ${(props) => props.theme.innerShadow};
     font-size: 1.9rem;
-    color: ${props => props.theme.colors.textDark};
+    color: ${(props) => props.theme.colors.textDark};
     &:focus {
-        border-color: ${props => props.theme.colors.primary};
+        border-color: ${(props) => props.theme.colors.primary};
     }
     @media (max-width: 786px) {
         width: 100%;
@@ -70,8 +71,8 @@ const TextField = styled.textarea`
     outline: none;
     display: block;
     border: none;
-    box-shadow: ${props => props.theme.innerShadow};
-    color: ${props => props.theme.colors.textDark};
+    box-shadow: ${(props) => props.theme.innerShadow};
+    color: ${(props) => props.theme.colors.textDark};
     @media (max-width: 786px) {
         width: 100%;
     }
@@ -87,24 +88,39 @@ const ContactInvite = styled.div`
     }
 `;
 
-
-
 export const ContactSection = () => (
-    <ContactContainer dark={false} >
-        <SectionWatermark>Contact</SectionWatermark>
-        <Bounce left>
-            <ContactInvite>
-                Feel free to contact me, Let’s talk about your project.
-            </ContactInvite>
-        </Bounce>
-        <Bounce right>
-            <ContactForm id="contact" name="contact" data-netlify="true" action="/success">
-                <input type="hidden" name="form-name" value="contact" />
-                <InputField name="name" placeholder="Name" required />
-                <InputField name="email" type="email" placeholder="Email" required />
-                <TextField name="message" placeholder="Message" required />
-                <div style={{ textAlign: 'center' }}><Button>Send Message</Button></div>
-            </ContactForm>
-        </Bounce>
-    </ContactContainer>
+  <ContactContainer dark={false}>
+    <SectionWatermark>Contact</SectionWatermark>
+    <Bounce left>
+      <ContactInvite>
+        Feel free to contact me, Let’s talk about your project.
+      </ContactInvite>
+    </Bounce>
+    <Bounce right>
+      <ContactForm
+        id="contact"
+        name="contact"
+        data-netlify="true"
+        action="/success"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <span>Name</span>
+        <InputField name="name" placeholder="Mudasir Hayat, etc" required />
+        <span>Email</span>
+        <InputField
+          name="email"
+          type="email"
+          placeholder="mudasir@domain.com"
+          required
+        />
+        <span>Message</span>
+        <TextField
+          name="message"
+          placeholder="Got something to say?"
+          required
+        />
+        <div style={{ textAlign: "center" }}><Button>Send Message</Button></div>
+      </ContactForm>
+    </Bounce>
+  </ContactContainer>
 );

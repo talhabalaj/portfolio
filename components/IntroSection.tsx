@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 import { Button } from "./Button";
 import styled from "styled-components";
-import { Section } from './Section';
-import Link from 'next/link';
-import Fade from 'react-reveal/Fade';
+import { Section } from "./Section";
+import Link from "next/link";
+import Fade from "react-reveal/Fade";
 
 const SocialLink = styled.a`
-  color: ${props => props.theme.colors.textDark};
+  color: ${(props) => props.theme.colors.textDark};
   i { 
     font-size: 3.5rem;
     transition: all .25s ease-in-out;
@@ -35,11 +35,11 @@ const Profile = styled.div`
 
   h1 {
     font-size: 7.4rem;
-    color: ${props => props.theme.colors.textDark};
+    color: ${(props) => props.theme.colors.textDark};
     div {
       display: block;
       &:nth-child(1) {
-        color: ${props => props.theme.colors.primary};
+        color: ${(props) => props.theme.colors.primary};
         font-weight: 900;
         text-transform: uppercase;
       }
@@ -49,7 +49,7 @@ const Profile = styled.div`
       }
     }
   }
-`
+`;
 
 const SocialLinkList = styled.ul`
   display: block;
@@ -63,7 +63,7 @@ const IntroContainer = styled(Section)`
   justify-content: center;
   align-items: center;
   text-align: center;
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
   z-index: 1000;
 
   ${HeaderWarkmark} {
@@ -80,7 +80,6 @@ const IntroContainer = styled(Section)`
   }
 `;
 
-
 export const IntroSection = () => (
   <>
     <IntroContainer dark={false}>
@@ -91,21 +90,37 @@ export const IntroSection = () => (
           <Fade up>Full Stack JavaScript Developer</Fade>
         </h1>
         <Fade left>
-          <SocialLinkList >
-            <SocialLink target="_blank" href="https://www.linkedin.com/in/talha-balaj-20a353101/"><i className="im im-linkedin"></i></SocialLink>
-            <SocialLink target="_blank" href="https://github.com/talhabalaj"><i className="im im-github"></i></SocialLink>
-            <SocialLink target="_blank" href="https://instagram.com/talha.codes"><i className="im im-instagram"></i></SocialLink>
-            <SocialLink target="_blank" href="https://dev.to/talhabalaj"><i className="im im-code"></i></SocialLink>
+          <SocialLinkList>
+            <SocialLink
+              target="_blank"
+              href="https://www.linkedin.com/in/talha-balaj-20a353101/"
+            >
+              <i className="im im-linkedin"></i>
+            </SocialLink>
+            <SocialLink target="_blank" href="https://github.com/talhabalaj">
+              <i className="im im-github">
+              </i>
+            </SocialLink>
+            <SocialLink
+              target="_blank"
+              href="https://instagram.com/talha.codes"
+            >
+              <i className="im im-instagram"></i>
+            </SocialLink>
+            <SocialLink target="_blank" href="https://dev.to/talhabalaj">
+              <i className="im im-code">
+              </i>
+            </SocialLink>
           </SocialLinkList>
         </Fade>
         <Fade right>
-          <Link href="#contact">
+          <Link href="#projects">
             <Button>
-              Contact Me
+              View My Work
             </Button>
           </Link>
         </Fade>
       </Profile>
     </IntroContainer>
   </>
-)
+);

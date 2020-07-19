@@ -1,26 +1,26 @@
 import { createGlobalStyle, DefaultTheme } from "styled-components";
 
 export const theme: DefaultTheme = {
-    colors: {
-        textDark: '#121212',
-        textLight: '#eaeaea',
-        primary: '#F0A500',
-        backDark: '#111111',
-        watermarkDark: '#272727',
-        backLight: '#EEEEEE',
-        watermarkLight: '#e2e2e2',
-        cardLightBack: 'white',
-        cardLightText: '#121212',
-        cardDarkBack: '#1A1919',
-        cardDarkText: '#eaeaea',
-    },
+  colors: {
+    textDark: "#121212",
+    textLight: "#eaeaea",
+    primary: "#F0A500",
+    backDark: "#111111",
+    watermarkDark: "#ffffff08",
+    backLight: "#EEEEEE",
+    watermarkLight: "#e2e2e2",
+    cardLightBack: "white",
+    cardLightText: "#121212",
+    cardDarkBack: "#1A1919",
+    cardDarkText: "#eaeaea",
+  },
 
-    innerShadow: 'inset 0px 1px 4px rgba(0, 0, 0, 0.09)',
-    boxShadow: ' 0px 4px 4px rgba(0, 0, 0, 0.25)',
-    pressedBoxShadow: '0px 1px 4px rgba(0, 0, 0, 0.25)',
+  innerShadow: "inset 0px 1px 4px rgba(0, 0, 0, 0.05)",
+  boxShadow: "0px 5px 11px rgba(0,0,0,0.10)",
+  pressedBoxShadow: "0px 1px 4px rgba(0, 0, 0, 0.25)",
 
-    sectionTopPadding: (level: number = 1) => `${level * 20}rem`,
-}
+  sectionTopPadding: (level: number = 1) => `${level * 20}rem`,
+};
 
 export const GlobalStyles = createGlobalStyle`
     * {
@@ -32,6 +32,10 @@ export const GlobalStyles = createGlobalStyle`
     
     html {
         font-size: 10px;
+        @media (min-width: 1920px) 
+        {
+            font-size: 12px;
+        }
         @media (max-width: 1200px) {
             font-size: 8px;
         }

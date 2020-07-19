@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { Section, SectionWatermarkClass, SectionWatermark } from './Section';
-import Fade from 'react-reveal/Fade';
-import { Button } from './Button';
+import styled from "styled-components";
+import { Section, SectionWatermarkClass, SectionWatermark } from "./Section";
+import Fade from "react-reveal/Fade";
+import { Button } from "./Button";
 
 const Projects = styled.div`
 
@@ -9,10 +9,8 @@ const Projects = styled.div`
 
 const ProjectCard = styled.div`
     width: 100%;
-    border-radius: 15px;
-    box-shadow: ${props => props.theme.boxShadow};
-    background: ${props => props.theme.colors.cardDarkBack};
-    color: ${props => props.theme.colors.cardDarkText};
+    background: ${(props) => props.theme.colors.cardDarkBack};
+    color: ${(props) => props.theme.colors.cardDarkText};
     padding: 10rem 3rem;
     display: flex;
     max-width: 110rem;
@@ -85,16 +83,17 @@ const TechIcons = styled.div`
  `;
 
 const ProjectsContainer = styled(Section)`
-    transform: translateY(-${props => props.theme.sectionTopPadding(3)});
+    transform: translateY(-${(props) => props.theme.sectionTopPadding(3)});
     align-items: center;
     flex-wrap: wrap;
     z-index: 700;
-    padding: calc(${props => props.theme.sectionTopPadding()} + 35rem) 10rem 22rem 10rem;
+    padding: calc(${(props) =>
+  props.theme.sectionTopPadding()} + 35rem) 10rem 22rem 10rem;
     clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
 
     ${SectionWatermarkClass} {
         font-size: 20rem;
-        top: calc(${props => props.theme.sectionTopPadding()} + 17rem);
+        top: calc(${(props) => props.theme.sectionTopPadding()} + 17rem);
 
         @media (max-width: 786px) { 
             font-size: 7rem;
@@ -105,7 +104,8 @@ const ProjectsContainer = styled(Section)`
 
     @media (max-width: 786px) {
         padding-left: 5rem;
-        padding-top: calc(${props => props.theme.sectionTopPadding()} + 10rem);
+        padding-top: calc(${(props) =>
+  props.theme.sectionTopPadding()} + 10rem);
         padding-right: 5rem;
         ${Projects} {
             flex-direction: column; 
@@ -131,49 +131,52 @@ const ProjectsContainer = styled(Section)`
 
 `;
 
-
-
 const AnimatedProjectCard = ({ project, description, imgSrc, techs }) => (
-    <Fade bottom cascade>
-        <ProjectCard>
-            <LaptopFramedProject>
-                <img src="/images/laptopframe.png" loading="lazy" />
-                <img src={imgSrc} loading="lazy" />
-            </LaptopFramedProject>
-            <ProjectDescription>
-                <h2>{project}</h2>
-                <p>{description}</p>
-                <h3>Technologies Used</h3>
-                {techs.map(tech => <TechIcons><img key={tech} src={`/svg/${tech}.svg`} /></TechIcons>)}
-            </ProjectDescription>
-        </ProjectCard>
-    </Fade >
+  <Fade bottom cascade>
+    <ProjectCard>
+      <LaptopFramedProject>
+        <img src="/images/laptopframe.png" loading="lazy" />
+        <img src={imgSrc} loading="lazy" />
+      </LaptopFramedProject>
+      <ProjectDescription>
+        <h2>{project}</h2>
+        <p>{description}</p>
+        <h3>Technologies Used</h3>
+        {techs.map((tech) =>
+          <TechIcons><img key={tech} src={`/svg/${tech}.svg`} /></TechIcons>
+        )}
+      </ProjectDescription>
+    </ProjectCard>
+  </Fade>
 );
 
 const projects = [
-    {
-        project: 'My Portfolio',
-        description: 'My portfolio is one of my best designs. It demonstrates my knowledge of React, NextJS and styled-components.',
-        imgSrc: '/images/portfolio.png',
-        techs: [
-            "react",
-            "nextjs",
-            "styled-components",
-            "figma",
-        ]
-    }
+  {
+    project: "My Portfolio",
+    description:
+      "My portfolio is one of my best designs. It demonstrates my knowledge of React, NextJS and styled-components.",
+    imgSrc: "/images/portfolio.png",
+    techs: [
+      "react",
+      "nextjs",
+      "styled-components",
+      "figma",
+    ],
+  },
 ];
 
 export const ProjectsSection = () => (
-    <ProjectsContainer dark>
-        <SectionWatermark>Projects</SectionWatermark>
-        <Projects>
-            {projects.map(project => <AnimatedProjectCard key={project.project} {...project} />)}
-        </Projects>
-        <Fade up>
-            <a target="_blank" href="https://github.com/talhabalaj?tab=repositories">
-                <Button>view more on github</Button>
-            </a>
-        </Fade>
-    </ProjectsContainer >
+  <ProjectsContainer dark>
+    <SectionWatermark>Projects</SectionWatermark>
+    <Projects id="projects">
+      {projects.map((project) =>
+        <AnimatedProjectCard key={project.project} {...project} />
+      )}
+    </Projects>
+    <Fade up>
+      <a target="_blank" href="https://github.com/talhabalaj?tab=repositories">
+        <Button>view more on github</Button>
+      </a>
+    </Fade>
+  </ProjectsContainer>
 );
